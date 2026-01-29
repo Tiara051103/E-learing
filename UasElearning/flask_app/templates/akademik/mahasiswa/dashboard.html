@@ -1,0 +1,58 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<div class="p-6">
+
+    <h2 class="text-2xl font-bold text-gray-800 mb-6">
+        📊 Nilai Mahasiswa
+    </h2>
+
+    <div class="bg-white rounded-xl shadow overflow-hidden">
+
+        <table class="w-full text-sm text-left">
+            <thead class="bg-blue-500 text-white">
+                <tr>
+                    <th class="px-4 py-3">Mata Kuliah</th>
+                    <th class="px-4 py-3">Nilai</th>
+                    <th class="px-4 py-3">Aksi</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for n in nilai %}
+                <tr class="border-b hover:bg-gray-50">
+                    <td class="px-4 py-3">{{ n[1] }}</td>
+                    <td class="px-4 py-3 font-semibold">{{ n[2] }}</td>
+                    <td class="px-4 py-3 space-x-2">
+                        <a href="{{ url_for('akademik.edit_nilai', id=n[0]) }}"
+                           class="inline-block bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600 transition">
+                            ✏️ Edit
+                        </a>
+                        <a href="{{ url_for('akademik.hapus_nilai', id=n[0]) }}"
+                           onclick="return confirm('Hapus nilai ini?')"
+                           class="inline-block bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 transition">
+                            🗑️ Hapus
+                        </a>
+                    </td>
+                </tr>
+                {% else %}
+                <tr>
+                    <td colspan="3" class="text-center py-6 text-gray-500">
+                        Belum ada nilai
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+
+    <div class="mt-6">
+        <a href="{{ url_for('akademik.dashboard_dosen') }}"
+           class="inline-block bg-blue-500 text-white px-5 py-2 rounded hover:bg-blue-600 transition">
+            ⬅ Kembali ke Dashboard Dosen
+        </a>
+    </div>
+
+</div>
+{% endblock %}

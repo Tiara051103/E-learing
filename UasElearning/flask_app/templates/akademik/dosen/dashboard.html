@@ -1,0 +1,98 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}Dashboard Dosen{% endblock %}
+
+{% block content %}
+
+<div class="bg-white p-6 rounded shadow">
+
+    <!-- MENU AKSI DOSEN -->
+    <div class="flex flex-wrap gap-4 mb-6">
+        <a href="{{ url_for('akademik.tambah_matkul') }}" 
+           class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">
+           ➕ Tambah Mata Kuliah
+        </a>
+        <a href="{{ url_for('akademik.input_nilai') }}" 
+           class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition">
+           📝 Input Nilai
+        </a>
+        <a href="{{ url_for('akademik.tambah_mahasiswa') }}" 
+           class="bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600 transition">
+           👨‍🎓 Tambah Mahasiswa
+        </a>
+    </div>
+
+    <!-- FLASH MESSAGE -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="mb-4 px-4 py-2 rounded
+               {% if category == 'success' %}
+                   bg-green-100 text-green-700
+               {% else %}
+                   bg-red-100 text-red-700
+               {% endif %}">
+            {{ message }}
+          </div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    <!-- DAFTAR MATA KULIAH -->
+    <h3 class="text-xl font-semibold mb-3">Daftar Mata Kuliah</h3>
+
+    <div class="overflow-x-auto mb-8">
+        <table class="min-w-full border border-gray-200">
+            <thead class="bg-gray-200">
+                <tr class="text-center">
+                    <th class="px-4 py-2 border">Kode</th>
+                    <th class="px-4 py-2 border">Nama</th>
+                    <th class="px-4 py-2 border">SKS</th>
+                    <th class="px-4 py-2 border">Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for m in matkul %}
+                <tr class="text-center hover:bg-gray-50">
+                    <td class="px-4 py-2 border">{{ m.kode }}</td>
+                    <td class="px-4 py-2 border">{{ m.nama }}</td>
+                    <td class="px-4 py-2 border">{{ m.sks }}</td>
+                    <td class="px-4 py-2 border space-x-2">
+                        <a href="{{ url_for('akademik.edit_matkul', id=m.id) }}" 
+                           class="bg-yellow-400 text-white px-3 py-1 rounded hover:bg-yellow-500">
+                           ✏️ Edit
+                        </a>
+                        <a href="{{ url_for('akademik.hapus_matkul', id=m.id) }}" 
+                           onclick="return confirm('Yakin hapus mata kuliah ini?')"
+                           class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">
+                           🗑️ Hapus
+                        </a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- DAFTAR MAHASISWA -->
+    <h3 class="text-xl font-semibold mb-3">Daftar Mahasiswa</h3>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {% for mhs in mahasiswa %}
+        <div class="p-4 border rounded shadow flex justify-between items-center">
+            <a href="{{ url_for('akademik.dashboard_mahasiswa', id=mhs[0]) }}"
+               class="font-semibold hover:text-blue-600">
+                {{ mhs[1] }}
+            </a>
+            <a href="{{ url_for('akademik.hapus_mahasiswa', id=mhs[0]) }}"
+               onclick="return confirm('Hapus mahasiswa ini?')"
+               class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">
+               🗑️
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+{% endblock %}

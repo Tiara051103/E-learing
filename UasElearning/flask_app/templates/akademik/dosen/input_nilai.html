@@ -1,0 +1,78 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}Input Nilai{% endblock %}
+
+{% block content %}
+
+<div class="max-w-md mx-auto bg-white p-6 rounded shadow">
+
+    <h2 class="text-2xl font-bold mb-6 text-center">
+        Input Nilai
+    </h2>
+
+    <form method="post" class="space-y-4">
+
+        <!-- Mahasiswa -->
+        <div>
+            <label class="block mb-1 font-semibold">
+                Mahasiswa
+            </label>
+            <select name="mahasiswa" required
+                    class="w-full border rounded px-3 py-2 focus:ring-2 focus:ring-blue-400">
+                <option value="">-- Pilih Mahasiswa --</option>
+                {% for mhs in mahasiswa %}
+                    <option value="{{ mhs[1] }}">
+                        {{ mhs[1] }}
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <!-- Mata Kuliah -->
+        <div>
+            <label class="block mb-1 font-semibold">
+                Mata Kuliah
+            </label>
+            <select name="matkul_id" required
+                    class="w-full border rounded px-3 py-2 focus:ring-2 focus:ring-blue-400">
+                <option value="">-- Pilih Mata Kuliah --</option>
+                {% for m in matkul %}
+                    <option value="{{ m.id }}">
+                        {{ m.nama }}
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <!-- Nilai -->
+        <div>
+            <label class="block mb-1 font-semibold">
+                Nilai
+            </label>
+            <input type="number"
+                   name="nilai"
+                   min="0"
+                   max="100"
+                   step="0.01"
+                   required
+                   class="w-full border rounded px-3 py-2 focus:ring-2 focus:ring-blue-400">
+        </div>
+
+        <!-- Tombol -->
+        <div class="flex justify-between items-center pt-6">
+            <a href="{{ url_for('akademik.dashboard_dosen') }}"
+               class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">
+               ← Kembali
+            </a>
+
+            <button type="submit"
+                    class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                Simpan
+            </button>
+        </div>
+
+    </form>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<div class="w-full max-w-3xl mx-auto bg-white p-6 rounded shadow">
+
+    <!-- Tombol Kembali -->
+    <div class="mb-4">
+        <a href="{{ url_for('materi.siswa_matakuliah') }}" 
+           class="inline-block bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 transition">
+            &larr; Kembali ke Daftar Mata Kuliah
+        </a>
+    </div>
+
+    <h2 class="text-2xl font-bold mb-6 text-center">Materi Mata Kuliah</h2>
+
+    <div class="space-y-4">
+        {% for m in materi %}
+        <div class="p-4 border rounded shadow hover:shadow-md transition">
+            <h3 class="text-xl font-semibold mb-2">{{ m.judul }}</h3>
+            <p class="mb-2 text-gray-700">{{ m.deskripsi }}</p>
+
+            <div class="space-x-2">
+                {% if m.tipe == "file" and m.file %}
+                    <a href="{{ url_for('materi.view_file', filename=m.file) }}" target="_blank"
+                       class="inline-block bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 transition">
+                        👁 Lihat Materi
+                    </a>
+                    <a href="{{ url_for('materi.download', filename=m.file) }}"
+                       class="inline-block bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600 transition">
+                        ⬇ Download
+                    </a>
+                {% elif m.tipe == "link" and m.link %}
+                    <a href="{{ m.link }}" target="_blank"
+                       class="inline-block bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 transition">
+                        👁 Lihat Link
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

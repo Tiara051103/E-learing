@@ -1,0 +1,27 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<div class="flex flex-col items-center justify-center min-h-[60vh] text-center">
+    <h2 class="text-3xl font-bold mb-10">
+        Pengelola Materi
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl w-full">
+        <!-- Card Dosen -->
+        <a href="/materi/dosen"
+           class="bg-blue-500 text-white px-8 py-10 rounded-xl shadow-lg
+                  hover:bg-blue-600 transition flex flex-col items-center gap-3">
+            <span class="text-5xl">👨‍🏫</span>
+            <span class="text-xl font-semibold">Masuk sebagai Dosen</span>
+        </a>
+
+        <!-- Card Mahasiswa -->
+        <a href="/materi/siswa/matakuliah"
+           class="bg-green-500 text-white px-8 py-10 rounded-xl shadow-lg
+                  hover:bg-green-600 transition flex flex-col items-center gap-3">
+            <span class="text-5xl">👨‍🎓</span>
+            <span class="text-xl font-semibold">Masuk sebagai Mahasiswa</span>
+        </a>
+    </div>
+</div>
+{% endblock %}
