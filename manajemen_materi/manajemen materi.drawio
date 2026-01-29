@@ -1,0 +1,106 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" version="29.3.4">
+  <diagram name="Page-1" id="HEXlyJJfSqoVg2z2sTv8">
+    <mxGraphModel grid="0" page="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="j446XszP5kQitO511XpD-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b&gt;1. Entities&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="117.5" y="341" as="geometry" />
+        </mxCell>
+        <mxCell id="j446XszP5kQitO511XpD-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b&gt;2.Use-Case&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="70" x="118.5" y="581" as="geometry" />
+        </mxCell>
+        <mxCell id="j446XszP5kQitO511XpD-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" value="3. Repositories" vertex="1">
+          <mxGeometry height="30" width="97" x="103.5" y="855" as="geometry" />
+        </mxCell>
+        <mxCell id="j446XszP5kQitO511XpD-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b&gt;4. Routes&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="97" x="99" y="1179" as="geometry" />
+        </mxCell>
+        <mxCell id="j446XszP5kQitO511XpD-5" parent="1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;" value="Class materi" vertex="1">
+          <mxGeometry height="150" width="181" x="248" y="274" as="geometry" />
+        </mxCell>
+        <mxCell id="j446XszP5kQitO511XpD-6" parent="j446XszP5kQitO511XpD-5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;" value="id" vertex="1">
+          <mxGeometry height="30" width="181" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="j446XszP5kQitO511XpD-7" parent="j446XszP5kQitO511XpD-5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;" value="judul" vertex="1">
+          <mxGeometry height="30" width="181" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="j446XszP5kQitO511XpD-8" parent="j446XszP5kQitO511XpD-5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;" value="deskripsi" vertex="1">
+          <mxGeometry height="30" width="181" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="j446XszP5kQitO511XpD-9" parent="j446XszP5kQitO511XpD-5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;" value="file_path" vertex="1">
+          <mxGeometry height="30" width="181" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="j446XszP5kQitO511XpD-16" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=16;startSize=14;endSize=14;sourcePerimeterSpacing=8;targetPerimeterSpacing=8;curved=1;strokeWidth=4;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="103.5" y="485" as="sourcePoint" />
+            <mxPoint x="830.5" y="482" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j446XszP5kQitO511XpD-17" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=16;startSize=14;endSize=14;sourcePerimeterSpacing=8;targetPerimeterSpacing=8;curved=1;strokeWidth=4;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="99.5" y="739" as="sourcePoint" />
+            <mxPoint x="825.5" y="736" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j446XszP5kQitO511XpD-18" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=16;startSize=14;endSize=14;sourcePerimeterSpacing=8;targetPerimeterSpacing=8;curved=1;strokeWidth=4;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="100.5" y="982" as="sourcePoint" />
+            <mxPoint x="837.5" y="985" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j446XszP5kQitO511XpD-19" parent="1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;" value="MateriUseCase" vertex="1">
+          <mxGeometry height="120" width="268" x="271" y="545" as="geometry" />
+        </mxCell>
+        <mxCell id="j446XszP5kQitO511XpD-20" parent="j446XszP5kQitO511XpD-19" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;" value="list_materi()" vertex="1">
+          <mxGeometry height="30" width="268" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="j446XszP5kQitO511XpD-21" parent="j446XszP5kQitO511XpD-19" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;" value="tambah_materi(judul, deskripsi, file_path)" vertex="1">
+          <mxGeometry height="30" width="268" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="j446XszP5kQitO511XpD-22" parent="j446XszP5kQitO511XpD-19" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;" value="hapus_materi (materi_id)" vertex="1">
+          <mxGeometry height="30" width="268" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="j446XszP5kQitO511XpD-26" parent="1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;" value="&lt;span style=&quot;&quot;&gt;TugasRepository&lt;/span&gt;" vertex="1">
+          <mxGeometry height="150" width="218.5" x="240.5" y="805" as="geometry" />
+        </mxCell>
+        <mxCell id="j446XszP5kQitO511XpD-28" parent="j446XszP5kQitO511XpD-26" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;" value="get_all ( )" vertex="1">
+          <mxGeometry height="30" width="218.5" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="j446XszP5kQitO511XpD-29" parent="j446XszP5kQitO511XpD-26" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;" value="add(judul, deskripsi, file_path)" vertex="1">
+          <mxGeometry height="30" width="218.5" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="j446XszP5kQitO511XpD-48" parent="j446XszP5kQitO511XpD-26" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;" value="add(judul, deskripsi, file_path)" vertex="1">
+          <mxGeometry height="30" width="218.5" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="j446XszP5kQitO511XpD-49" parent="j446XszP5kQitO511XpD-26" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;" value="delete(materi_id)" vertex="1">
+          <mxGeometry height="30" width="218.5" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="j446XszP5kQitO511XpD-33" parent="1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;fontColor=light-dark(#000000,#FFFFFF);" value="&lt;span style=&quot;&quot;&gt;materi_routes.py&lt;/span&gt;" vertex="1">
+          <mxGeometry height="234" width="472" x="260" y="1075" as="geometry" />
+        </mxCell>
+        <mxCell id="j446XszP5kQitO511XpD-34" parent="j446XszP5kQitO511XpD-33" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;fontColor=light-dark(#000000,#FFFFFF);labelBackgroundColor=none;" value="&lt;div style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px; white-space: pre;&quot;&gt;&lt;span style=&quot;&quot;&gt;@&lt;/span&gt;&lt;span style=&quot;&quot;&gt;materi_bp&lt;/span&gt;&lt;span style=&quot;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;&quot;&gt;route&lt;/span&gt;&lt;span style=&quot;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;&quot;&gt;&quot;/&quot;&lt;/span&gt;&lt;span style=&quot;&quot;&gt;)&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="472" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="j446XszP5kQitO511XpD-35" parent="j446XszP5kQitO511XpD-33" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;fontColor=light-dark(#000000,#FFFFFF);labelBackgroundColor=default;" value="&lt;div style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px; white-space: pre;&quot;&gt;&lt;div style=&quot;line-height: 19px;&quot;&gt;&lt;span style=&quot;&quot;&gt;@&lt;/span&gt;&lt;span style=&quot;&quot;&gt;materi_bp&lt;/span&gt;&lt;span style=&quot;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;&quot;&gt;route&lt;/span&gt;&lt;span style=&quot;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;&quot;&gt;&quot;/dosen/tambah&quot;&lt;/span&gt;&lt;span style=&quot;&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="472" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="j446XszP5kQitO511XpD-36" parent="j446XszP5kQitO511XpD-33" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;fontColor=light-dark(#000000,#FFFFFF);labelBackgroundColor=default;" value="&lt;div style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px; white-space: pre;&quot;&gt;&lt;div style=&quot;line-height: 19px;&quot;&gt;&lt;div style=&quot;line-height: 19px;&quot;&gt;&lt;span style=&quot;&quot;&gt;@&lt;/span&gt;&lt;span style=&quot;&quot;&gt;materi_bp&lt;/span&gt;&lt;span style=&quot;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;&quot;&gt;route&lt;/span&gt;&lt;span style=&quot;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;&quot;&gt;&quot;/dosen/simpan&quot;&lt;/span&gt;&lt;span style=&quot;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;&quot;&gt;methods&lt;/span&gt;&lt;span style=&quot;&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;&quot;&gt;[&lt;/span&gt;&lt;span style=&quot;&quot;&gt;&quot;POST&quot;&lt;/span&gt;&lt;span style=&quot;&quot;&gt;])&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="36" width="472" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="j446XszP5kQitO511XpD-37" parent="j446XszP5kQitO511XpD-33" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;fontColor=light-dark(#000000,#FFFFFF);labelBackgroundColor=default;" value="&lt;div style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px; white-space: pre;&quot;&gt;&lt;div style=&quot;line-height: 19px;&quot;&gt;&lt;div style=&quot;line-height: 19px;&quot;&gt;&lt;div style=&quot;line-height: 19px;&quot;&gt;&lt;span style=&quot;&quot;&gt;@&lt;/span&gt;&lt;span style=&quot;&quot;&gt;materi_bp&lt;/span&gt;&lt;span style=&quot;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;&quot;&gt;route&lt;/span&gt;&lt;span style=&quot;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;&quot;&gt;&quot;/dosen/hapus/&amp;lt;int:materi_id&amp;gt;&quot;&lt;/span&gt;&lt;span style=&quot;&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="36" width="472" y="126" as="geometry" />
+        </mxCell>
+        <mxCell id="j446XszP5kQitO511XpD-38" parent="j446XszP5kQitO511XpD-33" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;fontColor=light-dark(#000000,#FFFFFF);labelBackgroundColor=default;" value="&lt;div style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px; white-space: pre;&quot;&gt;&lt;div style=&quot;line-height: 19px;&quot;&gt;&lt;div style=&quot;line-height: 19px;&quot;&gt;&lt;div style=&quot;line-height: 19px;&quot;&gt;&lt;div style=&quot;line-height: 19px;&quot;&gt;&lt;span style=&quot;&quot;&gt;@&lt;/span&gt;&lt;span style=&quot;&quot;&gt;materi_bp&lt;/span&gt;&lt;span style=&quot;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;&quot;&gt;route&lt;/span&gt;&lt;span style=&quot;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;&quot;&gt;&quot;/mahasiswa&quot;&lt;/span&gt;&lt;span style=&quot;&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="36" width="472" y="162" as="geometry" />
+        </mxCell>
+        <mxCell id="j446XszP5kQitO511XpD-40" parent="j446XszP5kQitO511XpD-33" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;fontColor=light-dark(#000000,#FFFFFF);labelBackgroundColor=none;" value="&lt;div style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px; white-space: pre;&quot;&gt;&lt;div style=&quot;line-height: 19px;&quot;&gt;&lt;div style=&quot;line-height: 19px;&quot;&gt;&lt;div style=&quot;line-height: 19px;&quot;&gt;&lt;div style=&quot;line-height: 19px;&quot;&gt;&lt;div style=&quot;line-height: 19px;&quot;&gt;&lt;div style=&quot;line-height: 19px;&quot;&gt;&lt;span style=&quot;&quot;&gt;@&lt;/span&gt;&lt;span style=&quot;&quot;&gt;tugas_bp&lt;/span&gt;&lt;span style=&quot;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;&quot;&gt;route&lt;/span&gt;(&lt;span style=&quot;&quot;&gt;&quot;/tugas/&amp;lt;tugas_id&amp;gt;&quot;&lt;/span&gt;)&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="36" width="472" y="198" as="geometry" />
+        </mxCell>
+        <mxCell id="j446XszP5kQitO511XpD-41" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=20;fontFamily=Comic Sans MS;fontStyle=1" value="PERANCANGAN E- LEARNING (manajemen materi)" vertex="1">
+          <mxGeometry height="30" width="330" x="269.5" y="120" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
