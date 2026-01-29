@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Materi Mata Kuliah</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6 min-h-screen flex flex-col items-center">
+
+<div class="w-full max-w-3xl bg-white p-6 rounded shadow">
+    <!-- Tombol Kembali -->
+    <div class="mb-4">
+        <a href="/siswa/matakuliah" 
+           class="inline-block bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 transition">
+            &larr; Kembali ke Daftar Mata Kuliah
+        </a>
+    </div>
+
+    <h2 class="text-2xl font-bold mb-6 text-center">Materi Mata Kuliah</h2>
+
+    <div class="space-y-4">
+        {% for m in materi %}
+        <div class="p-4 border rounded shadow hover:shadow-md transition">
+            <h3 class="text-xl font-semibold mb-2">{{ m.judul }}</h3>
+            <p class="mb-2 text-gray-700">{{ m.deskripsi }}</p>
+
+            {% if m.tipe == "file" and m.file %}
+                <div class="space-x-2">
+                    {% if m.file.endswith('.pdf') %}
+                        <a href="/view/{{ m.file }}" target="_blank"
+                           class="inline-block bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 transition">
+                            👁 Lihat Materi
+                        </a>
+                        <a href="/download/{{ m.file }}"
+                           class="inline-block bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600 transition">
+                            ⬇ Download
+                        </a>
+                    {% else %}
+                        <a href="https://docs.google.com/gview?url={{ request.url_root }}view/{{ m.file }}&embedded=true"
+                           target="_blank"
+                           class="inline-block bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 transition">
+                            👁 Lihat Materi
+                        </a>
+                        <a href="/download/{{ m.file }}"
+                           class="inline-block bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600 transition">
+                            ⬇ Download
+                        </a>
+                    {% endif %}
+                </div>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+</body>
+</html>
