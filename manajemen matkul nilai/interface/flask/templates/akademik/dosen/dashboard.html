@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard Dosen</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen p-6">
+
+<div class="max-w-5xl mx-auto bg-white p-6 rounded shadow">
+
+    <h2 class="text-3xl font-bold mb-4 text-center">Dashboard Dosen</h2>
+
+    <!-- MENU AKSI DOSEN -->
+    <div class="flex flex-wrap gap-4 mb-6 justify-center">
+        <a href="{{ url_for('akademik.tambah_matkul') }}" 
+           class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">
+           ➕ Tambah Mata Kuliah
+        </a>
+        <a href="{{ url_for('akademik.input_nilai') }}" 
+           class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition">
+           📝 Input Nilai
+        </a>
+        <a href="{{ url_for('akademik.tambah_mahasiswa') }}" 
+           class="bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600 transition">
+           👨‍🎓 Tambah Mahasiswa
+        </a>
+    </div>
+
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <p class="font-semibold my-2 px-3 py-2 rounded 
+                    {% if category == 'success' %}bg-green-100 text-green-700{% else %}bg-red-100 text-red-700{% endif %}">
+            {{ message }}
+          </p>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    <hr class="my-6">
+
+    <!-- DAFTAR MATA KULIAH -->
+    <h3 class="text-2xl font-semibold mb-3">Daftar Mata Kuliah</h3>
+
+    <div class="overflow-x-auto">
+        <table class="min-w-full border border-gray-200">
+            <thead class="bg-gray-200">
+                <tr class="text-center">
+                    <th class="px-4 py-2 border">Kode</th>
+                    <th class="px-4 py-2 border">Nama</th>
+                    <th class="px-4 py-2 border">SKS</th>
+                    <th class="px-4 py-2 border">Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for m in matkul %}
+                <tr class="text-center hover:bg-gray-50">
+                    <td class="px-4 py-2 border">{{ m.kode }}</td>
+                    <td class="px-4 py-2 border">{{ m.nama }}</td>
+                    <td class="px-4 py-2 border">{{ m.sks }}</td>
+                    <td class="px-4 py-2 border space-x-2">
+                        <a href="{{ url_for('akademik.edit_matkul', id=m.id) }}" 
+                           class="bg-yellow-400 text-white px-3 py-1 rounded hover:bg-yellow-500 transition">
+                           ✏️ Edit
+                        </a>
+                        <a href="{{ url_for('akademik.hapus_matkul', id=m.id) }}" 
+                           onclick="return confirm('Yakin hapus mata kuliah ini?')"
+                           class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 transition">
+                           🗑️ Hapus
+                        </a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <hr class="my-6">
+
+    <!-- DAFTAR MAHASISWA -->
+    <h3 class="text-2xl font-semibold mb-3">Daftar Mahasiswa</h3>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {% for mhs in mahasiswa %}
+        <div class="p-4 border rounded shadow hover:shadow-md flex justify-between items-center">
+            <a href="{{ url_for('akademik.dashboard_mahasiswa', id=mhs[0]) }}" class="font-semibold text-gray-800 hover:text-blue-600">
+                {{ mhs[1] }}
+            </a>
+            <a href="{{ url_for('akademik.hapus_mahasiswa', id=mhs[0]) }}" 
+               onclick="return confirm('Hapus mahasiswa ini?')"
+               class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 transition">
+               🗑️ Hapus
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+</body>
+</html>
